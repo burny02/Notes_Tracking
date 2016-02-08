@@ -32,7 +32,12 @@ Notes_Tracking
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
 </member>
-<member name="P:Notes_Tracking.My.Resources.Resources.button__1_">
+<member name="P:Notes_Tracking.My.Resources.Resources.button_1">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:Notes_Tracking.My.Resources.Resources.Find">
 <summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>

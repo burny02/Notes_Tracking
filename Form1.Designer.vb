@@ -26,11 +26,9 @@ Partial Class Form1
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Form1))
         Me.TabPage1 = New System.Windows.Forms.TabPage()
         Me.Label2 = New System.Windows.Forms.Label()
-        Me.PictureBox4 = New System.Windows.Forms.PictureBox()
         Me.TabControl1 = New System.Windows.Forms.TabControl()
         Me.TabPage3 = New System.Windows.Forms.TabPage()
         Me.SplitContainer2 = New System.Windows.Forms.SplitContainer()
-        Me.Button3 = New System.Windows.Forms.Button()
         Me.ComboBox4 = New System.Windows.Forms.ComboBox()
         Me.ComboBox3 = New System.Windows.Forms.ComboBox()
         Me.ComboBox2 = New System.Windows.Forms.ComboBox()
@@ -92,7 +90,6 @@ Partial Class Form1
         Me.TextBox1 = New System.Windows.Forms.TextBox()
         Me.TabPage4 = New System.Windows.Forms.TabPage()
         Me.SplitContainer1 = New System.Windows.Forms.SplitContainer()
-        Me.Button2 = New System.Windows.Forms.Button()
         Me.Label8 = New System.Windows.Forms.Label()
         Me.ComboBox6 = New System.Windows.Forms.ComboBox()
         Me.Label9 = New System.Windows.Forms.Label()
@@ -101,11 +98,14 @@ Partial Class Form1
         Me.CheckBox3 = New System.Windows.Forms.CheckBox()
         Me.CheckBox2 = New System.Windows.Forms.CheckBox()
         Me.CheckBox1 = New System.Windows.Forms.CheckBox()
-        Me.Button1 = New System.Windows.Forms.Button()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
+        Me.PictureBox4 = New System.Windows.Forms.PictureBox()
+        Me.Button3 = New System.Windows.Forms.Button()
+        Me.Button4 = New System.Windows.Forms.Button()
+        Me.Button2 = New System.Windows.Forms.Button()
+        Me.Button1 = New System.Windows.Forms.Button()
         Me.BindingSource1 = New System.Windows.Forms.BindingSource(Me.components)
         Me.TabPage1.SuspendLayout()
-        CType(Me.PictureBox4, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.TabControl1.SuspendLayout()
         Me.TabPage3.SuspendLayout()
         CType(Me.SplitContainer2, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -118,6 +118,7 @@ Partial Class Form1
         Me.SplitContainer1.Panel2.SuspendLayout()
         Me.SplitContainer1.SuspendLayout()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox4, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.BindingSource1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -144,18 +145,6 @@ Partial Class Form1
         Me.Label2.Size = New System.Drawing.Size(48, 15)
         Me.Label2.TabIndex = 13
         Me.Label2.Text = "Version"
-        '
-        'PictureBox4
-        '
-        Me.PictureBox4.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.PictureBox4.BackgroundImage = CType(resources.GetObject("PictureBox4.BackgroundImage"), System.Drawing.Image)
-        Me.PictureBox4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.PictureBox4.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
-        Me.PictureBox4.Location = New System.Drawing.Point(302, 23)
-        Me.PictureBox4.Name = "PictureBox4"
-        Me.PictureBox4.Size = New System.Drawing.Size(437, 378)
-        Me.PictureBox4.TabIndex = 14
-        Me.PictureBox4.TabStop = False
         '
         'TabControl1
         '
@@ -258,20 +247,6 @@ Partial Class Form1
         Me.SplitContainer2.SplitterDistance = 40
         Me.SplitContainer2.TabIndex = 0
         '
-        'Button3
-        '
-        Me.Button3.BackgroundImage = Global.Notes_Tracking.My.Resources.Resources.button_1
-        Me.Button3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.Button3.Dock = System.Windows.Forms.DockStyle.Left
-        Me.Button3.FlatAppearance.BorderSize = 0
-        Me.Button3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Button3.Location = New System.Drawing.Point(0, 0)
-        Me.Button3.Name = "Button3"
-        Me.Button3.Size = New System.Drawing.Size(130, 40)
-        Me.Button3.TabIndex = 10
-        Me.Button3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Button3.UseVisualStyleBackColor = True
-        '
         'ComboBox4
         '
         Me.ComboBox4.Anchor = System.Windows.Forms.AnchorStyles.None
@@ -289,6 +264,7 @@ Partial Class Form1
         Me.ComboBox3.Name = "ComboBox3"
         Me.ComboBox3.Size = New System.Drawing.Size(105, 21)
         Me.ComboBox3.TabIndex = 116
+        Me.ComboBox3.Visible = False
         '
         'ComboBox2
         '
@@ -298,6 +274,7 @@ Partial Class Form1
         Me.ComboBox2.Name = "ComboBox2"
         Me.ComboBox2.Size = New System.Drawing.Size(105, 21)
         Me.ComboBox2.TabIndex = 115
+        Me.ComboBox2.Visible = False
         '
         'ComboBox1
         '
@@ -318,6 +295,7 @@ Partial Class Form1
         Me.Label6.Size = New System.Drawing.Size(38, 24)
         Me.Label6.TabIndex = 113
         Me.Label6.Text = "To:"
+        Me.Label6.Visible = False
         '
         'Label5
         '
@@ -329,6 +307,7 @@ Partial Class Form1
         Me.Label5.Size = New System.Drawing.Size(60, 24)
         Me.Label5.TabIndex = 112
         Me.Label5.Text = "From:"
+        Me.Label5.Visible = False
         '
         'Label4
         '
@@ -785,6 +764,7 @@ Partial Class Form1
         '
         'SplitContainer1.Panel1
         '
+        Me.SplitContainer1.Panel1.Controls.Add(Me.Button4)
         Me.SplitContainer1.Panel1.Controls.Add(Me.Button2)
         Me.SplitContainer1.Panel1.Controls.Add(Me.Label8)
         Me.SplitContainer1.Panel1.Controls.Add(Me.ComboBox6)
@@ -802,20 +782,6 @@ Partial Class Form1
         Me.SplitContainer1.Size = New System.Drawing.Size(1066, 403)
         Me.SplitContainer1.SplitterDistance = 40
         Me.SplitContainer1.TabIndex = 0
-        '
-        'Button2
-        '
-        Me.Button2.BackgroundImage = Global.Notes_Tracking.My.Resources.Resources.button
-        Me.Button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.Button2.Dock = System.Windows.Forms.DockStyle.Left
-        Me.Button2.FlatAppearance.BorderSize = 0
-        Me.Button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Button2.Location = New System.Drawing.Point(130, 0)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(188, 40)
-        Me.Button2.TabIndex = 21
-        Me.Button2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Button2.UseVisualStyleBackColor = True
         '
         'Label8
         '
@@ -919,6 +885,71 @@ Partial Class Form1
         Me.CheckBox1.TextAlign = System.Drawing.ContentAlignment.TopLeft
         Me.CheckBox1.UseVisualStyleBackColor = True
         '
+        'DataGridView1
+        '
+        Me.DataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
+        Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.DataGridView1.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.DataGridView1.Location = New System.Drawing.Point(0, 0)
+        Me.DataGridView1.Name = "DataGridView1"
+        Me.DataGridView1.RowHeadersVisible = False
+        Me.DataGridView1.Size = New System.Drawing.Size(1066, 359)
+        Me.DataGridView1.TabIndex = 0
+        '
+        'PictureBox4
+        '
+        Me.PictureBox4.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.PictureBox4.BackgroundImage = CType(resources.GetObject("PictureBox4.BackgroundImage"), System.Drawing.Image)
+        Me.PictureBox4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.PictureBox4.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.PictureBox4.Location = New System.Drawing.Point(302, 23)
+        Me.PictureBox4.Name = "PictureBox4"
+        Me.PictureBox4.Size = New System.Drawing.Size(437, 378)
+        Me.PictureBox4.TabIndex = 14
+        Me.PictureBox4.TabStop = False
+        '
+        'Button3
+        '
+        Me.Button3.BackgroundImage = Global.Notes_Tracking.My.Resources.Resources.button_1
+        Me.Button3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.Button3.Dock = System.Windows.Forms.DockStyle.Left
+        Me.Button3.FlatAppearance.BorderSize = 0
+        Me.Button3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.Button3.Location = New System.Drawing.Point(0, 0)
+        Me.Button3.Name = "Button3"
+        Me.Button3.Size = New System.Drawing.Size(130, 40)
+        Me.Button3.TabIndex = 10
+        Me.Button3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.Button3.UseVisualStyleBackColor = True
+        '
+        'Button4
+        '
+        Me.Button4.BackgroundImage = Global.Notes_Tracking.My.Resources.Resources.Find
+        Me.Button4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.Button4.Dock = System.Windows.Forms.DockStyle.Left
+        Me.Button4.FlatAppearance.BorderSize = 0
+        Me.Button4.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.Button4.Location = New System.Drawing.Point(318, 0)
+        Me.Button4.Name = "Button4"
+        Me.Button4.Size = New System.Drawing.Size(130, 40)
+        Me.Button4.TabIndex = 22
+        Me.Button4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.Button4.UseVisualStyleBackColor = True
+        '
+        'Button2
+        '
+        Me.Button2.BackgroundImage = Global.Notes_Tracking.My.Resources.Resources.button
+        Me.Button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.Button2.Dock = System.Windows.Forms.DockStyle.Left
+        Me.Button2.FlatAppearance.BorderSize = 0
+        Me.Button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.Button2.Location = New System.Drawing.Point(130, 0)
+        Me.Button2.Name = "Button2"
+        Me.Button2.Size = New System.Drawing.Size(188, 40)
+        Me.Button2.TabIndex = 21
+        Me.Button2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.Button2.UseVisualStyleBackColor = True
+        '
         'Button1
         '
         Me.Button1.BackgroundImage = Global.Notes_Tracking.My.Resources.Resources.button_1
@@ -933,17 +964,6 @@ Partial Class Form1
         Me.Button1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.Button1.UseVisualStyleBackColor = True
         '
-        'DataGridView1
-        '
-        Me.DataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
-        Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView1.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.DataGridView1.Location = New System.Drawing.Point(0, 0)
-        Me.DataGridView1.Name = "DataGridView1"
-        Me.DataGridView1.RowHeadersVisible = False
-        Me.DataGridView1.Size = New System.Drawing.Size(1066, 359)
-        Me.DataGridView1.TabIndex = 0
-        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -956,7 +976,6 @@ Partial Class Form1
         Me.Text = "Form1"
         Me.TabPage1.ResumeLayout(False)
         Me.TabPage1.PerformLayout()
-        CType(Me.PictureBox4, System.ComponentModel.ISupportInitialize).EndInit()
         Me.TabControl1.ResumeLayout(False)
         Me.TabPage3.ResumeLayout(False)
         Me.SplitContainer2.Panel1.ResumeLayout(False)
@@ -971,6 +990,7 @@ Partial Class Form1
         CType(Me.SplitContainer1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.SplitContainer1.ResumeLayout(False)
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox4, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.BindingSource1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
@@ -1056,4 +1076,5 @@ Partial Class Form1
     Friend WithEvents TextBox2 As TextBox
     Friend WithEvents TextBox1 As TextBox
     Friend WithEvents Button3 As Button
+    Friend WithEvents Button4 As Button
 End Class

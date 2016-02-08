@@ -8,9 +8,9 @@ Module MeddbaseLink
 
 
 
-        Dim appExcel As Object
-        Dim objWorkSheet As Object
-        Dim objQueryTable As Object
+        Dim appExcel As Object = Nothing
+        Dim objWorkSheet As Object = Nothing
+        Dim objQueryTable As Object = Nothing
 
         Dim ExcelLocation = "M:\VOLUNTEER SCREENING SERVICES\Systems\Notes_Tracking\MeddBase.xlsx"
         Dim SheetName = "Sheet1"
@@ -31,7 +31,18 @@ Module MeddbaseLink
             End
         End If
 
-        appExcel = GetObject(ExcelLocation)
+        Dim Success As Boolean = False
+
+        Do While success = False
+            Try
+                appExcel = GetObject(ExcelLocation)
+                Success = True
+            Catch ex As Exception
+                Continue Do
+            End Try
+        Loop
+
+
         objWorkSheet = appExcel.Worksheets(SheetName)
 
         objQueryTable = objWorkSheet.QueryTables(QueryName)

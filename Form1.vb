@@ -35,6 +35,9 @@ Public Class Form1
 
                 Call Specifics(DataGridView1)
 
+            Case "Bulk Update"
+
+                Call Specifics(ComboBox1)
 
         End Select
 
@@ -152,6 +155,27 @@ Public Class Form1
                 clm7.DisplayIndex = 9
                 clm6.DisplayIndex = 10
 
+            Case "ComboBox1"
+
+                ComboBox1.DataSource = OverClass.TempDataTable("SELECT DISTINCT '' AS Site FROM SITE " &
+                                                              "UNION ALL SELECT Site FROM Site ORDER BY Site ASC")
+                ComboBox1.DisplayMember = "Site"
+                ComboBox1.ValueMember = "Site"
+
+                ComboBox2.DataSource = OverClass.TempDataTable("SELECT DISTINCT '' AS Site FROM SITE " &
+                                                              "UNION ALL SELECT Site FROM Site ORDER BY Site ASC")
+                ComboBox2.DisplayMember = "Site"
+                ComboBox2.ValueMember = "Site"
+
+                ComboBox3.DataSource = OverClass.TempDataTable("SELECT DISTINCT '' AS Site FROM SITE " &
+                                                              "UNION ALL SELECT Site FROM Site ORDER BY Site ASC")
+                ComboBox3.DisplayMember = "Site"
+                ComboBox3.ValueMember = "Site"
+
+                ComboBox4.DataSource = OverClass.TempDataTable("SELECT DISTINCT '' As LocationAtSite FROM SiteLocation " &
+                                                          "UNION ALL SELECT LocationAtSite FROM SiteLocation ORDER BY LocationAtSite ASC")
+                ComboBox4.ValueMember = "LocationAtSite"
+                ComboBox4.DisplayMember = "LocationAtSite"
 
         End Select
 
@@ -207,12 +231,13 @@ Public Class Form1
                 DataGridView1.Rows(e.RowIndex).DefaultCellStyle.BackColor = cDialog.Color
             End If
         ElseIf e.ColumnIndex = DataGridView1.Columns("History").Index Then
-            Dim SQLString As String = "SELECT Person & '(' & format(Timestamp,'dd-MMM-yyyy') & ') ' & chr(10) & chr(13) & SubjectID & ' Site: ' & SiteAt " &
-                "& ' Location: ' & LocationAtSite & ' ' & [FROM] & '>' & To " &
+            Dim SQLString As String = "SELECT Person & ' (' & format(Timestamp,'dd-MMM-yyyy') & ') ' & chr(10) & chr(13) " &
+                "& iif(LocationAtSite='In Transit','',' Site: ' & SiteAt) " &
+                "& ' Location: ' & LocationAtSite & ' ' & iif(LocationAtSite='In Transit',[FROM] & '>' & To & '.','') " &
                 "FROM History WHERE SubjectID=" & DataGridView1.Item("SubjectID", e.RowIndex).Value &
                 " ORDER BY Timestamp DESC"
             Dim CSVString = OverClass.CreateCSVString(SQLString)
-            MsgBox(Trim(Replace(CSVString, ",", vbNewLine & vbNewLine)))
+            MsgBox(Trim(Replace(CSVString, ",", vbNewLine & vbNewLine)),, DataGridView1.Item("SubjectID", e.RowIndex).Value)
 
         End If
 
@@ -267,10 +292,34 @@ Public Class Form1
             e.Cancel = True
         End If
 
+        If ToString = FromString And ToString <> "" And FromString <> "" Then
+            MsgBox("Sites cannot be the same")
+            e.Cancel = True
+        End If
 
+    End Sub
 
+    Private Sub ComboBox4_SelectedIndexChanged(sender As Object, e As EventArgs) Handles ComboBox4.SelectedIndexChanged
 
+        If ComboBox4.SelectedValue.ToString = "In Transit" Then
 
+            ComboBox1.Visible = False
+            Label4.Visible = False
+            ComboBox1.SelectedValue = ""
+            ComboBox3.Visible = True
+            ComboBox2.Visible = True
+            Label5.Visible = True
+            Label6.Visible = True
+        Else
+            ComboBox1.Visible = True
+            Label4.Visible = True
+            ComboBox3.Visible = False
+            ComboBox2.Visible = False
+            ComboBox3.SelectedValue = ""
+            ComboBox2.SelectedValue = ""
+            Label5.Visible = False
+            Label6.Visible = False
+        End If
 
     End Sub
 End Class

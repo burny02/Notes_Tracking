@@ -1,0 +1,17 @@
+C:\OK\Databases\Backup\Notes_Tracking\Notes_Tracking\Notes_Tracking\bin\x86\Debug\Notes_Tracking.exe.config
+C:\OK\Databases\Backup\Notes_Tracking\Notes_Tracking\Notes_Tracking\bin\x86\Debug\Notes_Tracking.exe.manifest
+C:\OK\Databases\Backup\Notes_Tracking\Notes_Tracking\Notes_Tracking\bin\x86\Debug\Notes_Tracking.application
+C:\OK\Databases\Backup\Notes_Tracking\Notes_Tracking\Notes_Tracking\bin\x86\Debug\Notes_Tracking.exe
+C:\OK\Databases\Backup\Notes_Tracking\Notes_Tracking\Notes_Tracking\bin\x86\Debug\Notes_Tracking.pdb
+C:\OK\Databases\Backup\Notes_Tracking\Notes_Tracking\Notes_Tracking\bin\x86\Debug\Notes_Tracking.xml
+C:\OK\Databases\Backup\Notes_Tracking\Notes_Tracking\Notes_Tracking\bin\x86\Debug\TemplateDB.dll
+C:\OK\Databases\Backup\Notes_Tracking\Notes_Tracking\Notes_Tracking\bin\x86\Debug\TemplateDB.pdb
+C:\OK\Databases\Backup\Notes_Tracking\Notes_Tracking\Notes_Tracking\bin\x86\Debug\TemplateDB.xml
+C:\OK\Databases\Backup\Notes_Tracking\Notes_Tracking\Notes_Tracking\obj\x86\Debug\Notes_Tracking.Form1.resources
+C:\OK\Databases\Backup\Notes_Tracking\Notes_Tracking\Notes_Tracking\obj\x86\Debug\Notes_Tracking.Resources.resources
+C:\OK\Databases\Backup\Notes_Tracking\Notes_Tracking\Notes_Tracking\obj\x86\Debug\Notes_Tracking.vbproj.GenerateResource.Cache
+C:\OK\Databases\Backup\Notes_Tracking\Notes_Tracking\Notes_Tracking\obj\x86\Debug\Notes_Tracking.exe.manifest
+C:\OK\Databases\Backup\Notes_Tracking\Notes_Tracking\Notes_Tracking\obj\x86\Debug\Notes_Tracking.application
+C:\OK\Databases\Backup\Notes_Tracking\Notes_Tracking\Notes_Tracking\obj\x86\Debug\Notes_Tracking.exe
+C:\OK\Databases\Backup\Notes_Tracking\Notes_Tracking\Notes_Tracking\obj\x86\Debug\Notes_Tracking.xml
+C:\OK\Databases\Backup\Notes_Tracking\Notes_Tracking\Notes_Tracking\obj\x86\Debug\Notes_Tracking.pdb
